@@ -8,6 +8,13 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@playwright/test": "^1.32.3"
+    "@axe-core/webdriverjs": "^4.6.1",
+    "@playwright/test": "^1.32.3",
+    "axe-core": "^4.6.3"
+  },
+  "dependencies": {
+    "@axe-core/playwright": "^4.6.1",
+    "axe-reports": "^1.1.11",
+    "axe-webdriverjs": "^2.3.0"
   }
 }
