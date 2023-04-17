@@ -1,6 +1,22 @@
 // @ts-check
 const { test, expect } = require('@playwright/test');
 
+const AxeBuilder = require('@axe-core/playwright').default;
+
+test('should not have any automatically detectable accessibility issues', async ({ page }, testInfo) => {
+  await page.goto('/1-3339547');
+
+  const accessibilityScanResults = await new AxeBuilder({ page }).analyze();
+
+
+    await testInfo.attach('accessibility-scan-results', {
+      body: JSON.stringify(accessibilityScanResults, null, 2),
+      contentType: 'application/json'
+    });
+
+  expect(accessibilityScanResults.violations).toEqual([]);
+});
+
 test('extract episode name and date', async ({ page }) => {
   await page.goto('https://areena.yle.fi/1-3339547');
 
