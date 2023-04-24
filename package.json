@@ -16,6 +16,7 @@
   "dependencies": {
     "@axe-core/playwright": "^4.6.1",
     "axe-reports": "^1.1.11",
-    "axe-webdriverjs": "^2.3.0"
+    "axe-webdriverjs": "^2.3.0",
+    "browserstack-local": "^1.5.2"
   }
 }
